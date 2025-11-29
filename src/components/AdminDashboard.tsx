@@ -73,8 +73,49 @@ export function AdminDashboard({ reports }: AdminDashboardProps) {
     .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
     .slice(0, 5);
 
+
+  // ----------------------------------------------------
+  // ✅ NEW CSV DOWNLOAD FUNCTION — ONLY REQUIRED FIELDS
+  // ----------------------------------------------------
+  const downloadCSV = () => {
+    const headers = ["ID", "Category", "Status", "Latitude", "Longitude"];
+
+    const rows = reports.map((r) => [
+      r.id || "",
+      r.category || "",
+      r.status || "",
+      r.location?.lat || "",
+      r.location?.lng || "",
+    ]);
+
+    const csvContent =
+      "data:text/csv;charset=utf-8," +
+      [headers.join(","), ...rows.map((row) => row.join(","))].join("\n");
+
+    const link = document.createElement("a");
+    link.href = encodeURI(csvContent);
+    link.download = "urban_civic_reports.csv";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
   return (
     <div className="space-y-6">
+
+      {/* ----------------------------------------------------
+          📥 DOWNLOAD CSV BUTTON (INSERTED HERE)
+      ---------------------------------------------------- */}
+      <div className="flex justify-end">
+        <button
+          onClick={downloadCSV}
+          className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md shadow-md"
+        >
+          Download CSV
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           title="Total Reports"
@@ -136,7 +177,7 @@ export function AdminDashboard({ reports }: AdminDashboardProps) {
 
         <TabsContent value="analytics" className="space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Pie Chart for Status Distribution */}
+
             <Card>
               <CardHeader>
                 <CardTitle>Report Status Distribution</CardTitle>
@@ -169,7 +210,6 @@ export function AdminDashboard({ reports }: AdminDashboardProps) {
               </CardContent>
             </Card>
 
-            {/* Bar Chart for Categories */}
             <Card>
               <CardHeader>
                 <CardTitle>Reports by Category</CardTitle>
@@ -186,14 +226,19 @@ export function AdminDashboard({ reports }: AdminDashboardProps) {
                 </ResponsiveContainer>
               </CardContent>
             </Card>
+
           </div>
         </TabsContent>
+
       </Tabs>
     </div>
   );
 }
 
+
+// --------------------------------------------
 // Stat Card Component
+// --------------------------------------------
 interface StatCardProps {
   title: string;
   value: number;
@@ -236,33 +281,4 @@ function StatCard({ title, value, iconColor, icon, trend }: StatCardProps) {
       </CardContent>
     </Card>
   );
-}
-
-// Helper functions
-function getStatusColor(status: ReportStatus): string {
-  switch (status) {
-    case 'Pending':
-      return 'bg-urban-warning';
-    case 'In Progress':
-      return 'bg-urban-info';
-    case 'Fixed':
-      return 'bg-urban-success';
-    default:
-      return 'bg-muted-foreground';
-  }
-}
-
-function getCategoryColor(category: string): string {
-  switch (category) {
-    case 'Waste':
-      return 'bg-amber-500';
-    case 'Pothole':
-      return 'bg-red-500';
-    case 'Leak':
-      return 'bg-blue-500';
-    case 'Streetlight':
-      return 'bg-yellow-400';
-    default:
-      return 'bg-gray-500';
-  }
 }
