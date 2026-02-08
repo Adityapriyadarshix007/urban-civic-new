@@ -324,7 +324,7 @@ The optimized production build will be available in the dist/ directory.
 | ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat) | Data visualization |
 | DBSCAN | Clustering algorithm |
 
---
+---
 
 ## 🤝 Contributing
 
@@ -353,4 +353,5 @@ EPICS23-669
 
 <div align="center">
   Made with ❤️ for EPICS Phase-I
+
 </div>
