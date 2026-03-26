@@ -14,16 +14,27 @@ export default function Login() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
-      localStorage.setItem("user", JSON.stringify(user));
-      localStorage.setItem("token", await user.getIdToken());
+      // ✅ Store minimal data (avoid storing full user object)
+      localStorage.setItem("user", JSON.stringify({
+        uid: user.uid,
+        name: user.displayName,
+        email: user.email,
+      }));
 
-      await setDoc(doc(db, "users", user.uid!), {
+      // ✅ Store token properly
+      const token = await user.getIdToken();
+      localStorage.setItem("token", token);
+
+      // ✅ Save to Firestore
+      await setDoc(doc(db, "users", user.uid), {
         name: user.displayName,
         email: user.email,
         loginAt: serverTimestamp(),
       });
 
-      navigate("/");
+      // ✅ IMPORTANT: force refresh so ProtectedRoute re-checks auth
+      window.location.href = "/";   // 🔥 THIS FIXES YOUR ISSUE
+
     } catch (err) {
       console.error("❌ Firebase Auth login failed:", err);
     }
