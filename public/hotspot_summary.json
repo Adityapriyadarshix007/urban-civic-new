@@ -1,198 +1,205 @@
 [
   {
     "cluster_id": -1,
-    "complaint_count": 162,
-    "avg_density_score": 0.0126539552132651,
-    "pending_ratio": 0.5246913580246914,
+    "complaint_count": 150,
+    "avg_density_score": 0.0154688247470919,
+    "pending_ratio": 0.4733333333333333,
     "hotspot_risk_level": "HIGH"
   },
   {
     "cluster_id": 0,
-    "complaint_count": 411,
-    "avg_density_score": 0.2658410221823259,
-    "pending_ratio": 0.4695863746958637,
+    "complaint_count": 409,
+    "avg_density_score": 0.2759381406725656,
+    "pending_ratio": 0.4792176039119804,
     "hotspot_risk_level": "HIGH"
   },
   {
     "cluster_id": 1,
-    "complaint_count": 363,
-    "avg_density_score": 0.2558673514384328,
-    "pending_ratio": 0.465564738292011,
-    "hotspot_risk_level": "HIGH"
+    "complaint_count": 4,
+    "avg_density_score": 0.0260461051548109,
+    "pending_ratio": 0.5,
+    "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 2,
-    "complaint_count": 310,
-    "avg_density_score": 0.2319988920986521,
-    "pending_ratio": 0.4967741935483871,
+    "complaint_count": 362,
+    "avg_density_score": 0.2471085586874193,
+    "pending_ratio": 0.5082872928176796,
     "hotspot_risk_level": "HIGH"
   },
   {
     "cluster_id": 3,
-    "complaint_count": 264,
-    "avg_density_score": 0.209607798029375,
-    "pending_ratio": 0.4507575757575757,
+    "complaint_count": 314,
+    "avg_density_score": 0.2359370322027931,
+    "pending_ratio": 0.4968152866242038,
     "hotspot_risk_level": "HIGH"
   },
   {
     "cluster_id": 4,
-    "complaint_count": 3,
-    "avg_density_score": 0.0225169040226568,
-    "pending_ratio": 1.0,
-    "hotspot_risk_level": "MEDIUM"
-  },
-  {
-    "cluster_id": 5,
-    "complaint_count": 8,
-    "avg_density_score": 0.0295613338756653,
-    "pending_ratio": 0.5,
+    "complaint_count": 264,
+    "avg_density_score": 0.2012688816248038,
+    "pending_ratio": 0.4924242424242424,
     "hotspot_risk_level": "HIGH"
   },
   {
-    "cluster_id": 6,
+    "cluster_id": 5,
     "complaint_count": 3,
-    "avg_density_score": 0.0180098942227485,
-    "pending_ratio": 0.6666666666666666,
+    "avg_density_score": 0.0185599947819168,
+    "pending_ratio": 0.3333333333333333,
     "hotspot_risk_level": "MEDIUM"
   },
   {
+    "cluster_id": 6,
+    "complaint_count": 13,
+    "avg_density_score": 0.0286039915985616,
+    "pending_ratio": 0.6153846153846154,
+    "hotspot_risk_level": "HIGH"
+  },
+  {
     "cluster_id": 7,
-    "complaint_count": 7,
-    "avg_density_score": 0.0380611662746474,
-    "pending_ratio": 0.4285714285714285,
+    "complaint_count": 9,
+    "avg_density_score": 0.0284584769345155,
+    "pending_ratio": 0.4444444444444444,
     "hotspot_risk_level": "HIGH"
   },
   {
     "cluster_id": 8,
-    "complaint_count": 3,
-    "avg_density_score": 0.024339315317218,
-    "pending_ratio": 0.0,
-    "hotspot_risk_level": "MEDIUM"
-  },
-  {
-    "cluster_id": 9,
-    "complaint_count": 5,
-    "avg_density_score": 0.0200986364018885,
-    "pending_ratio": 0.4,
+    "complaint_count": 8,
+    "avg_density_score": 0.0330792559449629,
+    "pending_ratio": 0.75,
     "hotspot_risk_level": "HIGH"
   },
   {
+    "cluster_id": 9,
+    "complaint_count": 3,
+    "avg_density_score": 0.0240726713758749,
+    "pending_ratio": 0.3333333333333333,
+    "hotspot_risk_level": "MEDIUM"
+  },
+  {
     "cluster_id": 10,
-    "complaint_count": 4,
-    "avg_density_score": 0.0201855824091431,
-    "pending_ratio": 0.5,
+    "complaint_count": 3,
+    "avg_density_score": 0.0203402122194122,
+    "pending_ratio": 0.6666666666666666,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 11,
     "complaint_count": 4,
-    "avg_density_score": 0.017524975247754,
-    "pending_ratio": 0.5,
+    "avg_density_score": 0.0230713793778194,
+    "pending_ratio": 0.75,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 12,
     "complaint_count": 3,
-    "avg_density_score": 0.0220263306894013,
-    "pending_ratio": 0.6666666666666666,
+    "avg_density_score": 0.0312779643118292,
+    "pending_ratio": 0.3333333333333333,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 13,
     "complaint_count": 3,
-    "avg_density_score": 0.0181870956458131,
-    "pending_ratio": 0.3333333333333333,
+    "avg_density_score": 0.0291115118586786,
+    "pending_ratio": 0.6666666666666666,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 14,
-    "complaint_count": 3,
-    "avg_density_score": 0.0164782908569836,
-    "pending_ratio": 0.3333333333333333,
+    "complaint_count": 4,
+    "avg_density_score": 0.0227137256122803,
+    "pending_ratio": 0.5,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 15,
     "complaint_count": 4,
-    "avg_density_score": 0.0350208000228976,
-    "pending_ratio": 0.0,
+    "avg_density_score": 0.0665877862545671,
+    "pending_ratio": 0.5,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 16,
     "complaint_count": 3,
-    "avg_density_score": 0.0164418998829861,
-    "pending_ratio": 0.6666666666666666,
+    "avg_density_score": 0.030142134872893,
+    "pending_ratio": 0.3333333333333333,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 17,
     "complaint_count": 3,
-    "avg_density_score": 0.0212441010778064,
+    "avg_density_score": 0.0244151682612669,
     "pending_ratio": 0.3333333333333333,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 18,
     "complaint_count": 5,
-    "avg_density_score": 0.0456076344421696,
+    "avg_density_score": 0.0598359467882548,
     "pending_ratio": 0.4,
     "hotspot_risk_level": "HIGH"
   },
   {
     "cluster_id": 19,
-    "complaint_count": 4,
-    "avg_density_score": 0.0226844314874178,
-    "pending_ratio": 0.25,
+    "complaint_count": 3,
+    "avg_density_score": 0.0135463591450366,
+    "pending_ratio": 1.0,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 20,
-    "complaint_count": 6,
-    "avg_density_score": 0.026134768483373,
-    "pending_ratio": 0.5,
-    "hotspot_risk_level": "HIGH"
+    "complaint_count": 3,
+    "avg_density_score": 0.0216612073314353,
+    "pending_ratio": 1.0,
+    "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 21,
-    "complaint_count": 4,
-    "avg_density_score": 0.022167724238945,
-    "pending_ratio": 0.25,
+    "complaint_count": 3,
+    "avg_density_score": 0.0077387159336076,
+    "pending_ratio": 0.3333333333333333,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 22,
     "complaint_count": 3,
-    "avg_density_score": 0.0243240426826196,
-    "pending_ratio": 0.3333333333333333,
-    "hotspot_risk_level": "MEDIUM"
-  },
-  {
-    "cluster_id": 23,
-    "complaint_count": 3,
-    "avg_density_score": 0.0233776554476553,
+    "avg_density_score": 0.0207801323745692,
     "pending_ratio": 0.6666666666666666,
     "hotspot_risk_level": "MEDIUM"
   },
   {
+    "cluster_id": 23,
+    "complaint_count": 4,
+    "avg_density_score": 0.0345793490261755,
+    "pending_ratio": 0.0,
+    "hotspot_risk_level": "MEDIUM"
+  },
+  {
     "cluster_id": 24,
-    "complaint_count": 3,
-    "avg_density_score": 0.0195023560723295,
-    "pending_ratio": 0.3333333333333333,
+    "complaint_count": 4,
+    "avg_density_score": 0.0281957958932841,
+    "pending_ratio": 0.5,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 25,
     "complaint_count": 3,
-    "avg_density_score": 0.0197764432198403,
-    "pending_ratio": 0.0,
+    "avg_density_score": 0.0278237060453724,
+    "pending_ratio": 0.6666666666666666,
     "hotspot_risk_level": "MEDIUM"
   },
   {
     "cluster_id": 26,
     "complaint_count": 3,
-    "avg_density_score": 0.0174565231773983,
-    "pending_ratio": 0.3333333333333333,
+    "avg_density_score": 0.0150616150380868,
+    "pending_ratio": 0.6666666666666666,
+    "hotspot_risk_level": "MEDIUM"
+  },
+  {
+    "cluster_id": 27,
+    "complaint_count": 3,
+    "avg_density_score": 0.0203076113315812,
+    "pending_ratio": 0.6666666666666666,
     "hotspot_risk_level": "MEDIUM"
   }
 ]

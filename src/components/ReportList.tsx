@@ -43,21 +43,66 @@ export function ReportList({ reports, viewMode = 'full', className }: ReportList
     );
   };
 
-  const filteredReports = reports.filter(report => {
-    const matchesSearch =
-      searchTerm === '' ||
-      report.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      report.address?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      report.category?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (report.status && report.status.toLowerCase().includes(searchTerm.toLowerCase()));
+  // const filteredReports = reports.filter(report => {
+  //   const matchesSearch =
+  //     searchTerm === '' ||
+  //     report.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     report.address?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     report.category?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     (report.status && report.status.toLowerCase().includes(searchTerm.toLowerCase()));
 
-    const matchesStatus =
-      statusFilter.length === 0 || (report.status && statusFilter.includes(report.status));
+  //   const matchesStatus =
+  //     statusFilter.length === 0 || (report.status && statusFilter.includes(report.status));
 
-    const matchesCategory =
-      categoryFilter.length === 0 || categoryFilter.includes(report.category);
+  //   const matchesCategory =
+  //     categoryFilter.length === 0 || categoryFilter.includes(report.category);
 
-    return matchesSearch && matchesStatus && matchesCategory;
+  //   return matchesSearch && matchesStatus && matchesCategory;
+  // });
+
+  const search = searchTerm.toLowerCase();
+
+  const priorityOrder = {
+    HIGH: 3,
+    MEDIUM: 2,
+    LOW: 1,
+  };
+
+  const sortedReports = [...reports].sort((a, b) => {
+    const priorityDiff =
+      (priorityOrder[b.priority] || 0) -
+      (priorityOrder[a.priority] || 0);
+
+    if (priorityDiff !== 0) return priorityDiff;
+
+    return new Date(b.timestamp).getTime() -
+          new Date(a.timestamp).getTime();
+  });
+
+  const filteredReports = sortedReports.filter(report => {
+  // const matchesSearch =
+  //   searchTerm === '' ||
+  //   (report.description || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //   (report.address || report.location?.address || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //   (report.category || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //   (report.status || '').toLowerCase().includes(searchTerm.toLowerCase());
+
+  const matchesSearch =
+    search === '' ||
+    (report.description || '').toLowerCase().includes(search) ||
+    (report.address || report.location?.address || '').toLowerCase().includes(search) ||
+    (report.category || '').toLowerCase().includes(search) ||
+    (report.status || '').toLowerCase().includes(search);
+
+  const matchesStatus =
+    statusFilter.length === 0 ||
+    (report.status && statusFilter.includes(report.status));
+
+  const matchesCategory =
+    categoryFilter.length === 0 ||
+    categoryFilter.includes(report.category);
+
+  return matchesSearch && matchesStatus && matchesCategory;
   });
 
   return (

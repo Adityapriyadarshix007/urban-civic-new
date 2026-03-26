@@ -13,6 +13,7 @@ import { TooltipProvider } from "./components/ui/tooltip";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as Sonner } from "./components/ui/sonner";
 
+
 // Pages
 import ReportMapView from "./pages/ReportMapView";
 import Index from "./pages/Index";
@@ -62,6 +63,16 @@ const AppRoutes = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/report/:id/map" element={<ReportMapView />} />
+        
+        <Route
+          path="/map"
+          element={
+            <ProtectedRoute>
+              <ReportMapView />
+            </ProtectedRoute>
+          }
+        />
+        
 
         {/* Protected Routes */}
         <Route

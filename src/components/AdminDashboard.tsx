@@ -35,6 +35,8 @@ import {
   TabsTrigger,
 } from '@/components/ui/tabs';
 
+import AnalyticsDashboard from './AnalyticsDashboard';
+
 interface AdminDashboardProps {
   reports: Report[];
 }
@@ -175,7 +177,7 @@ export function AdminDashboard({ reports }: AdminDashboardProps) {
           <ReportList reports={reports} />
         </TabsContent>
 
-        <TabsContent value="analytics" className="space-y-5">
+        {/* <TabsContent value="analytics" className="space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
             <Card>
@@ -228,6 +230,10 @@ export function AdminDashboard({ reports }: AdminDashboardProps) {
             </Card>
 
           </div>
+        </TabsContent> */ }
+
+        <TabsContent value="analytics" className="space-y-5">
+          <AnalyticsDashboard reports={reports} />
         </TabsContent>
 
       </Tabs>
