@@ -1,0 +1,70 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0F172A"/>
+
+  <!-- Gradient Circle -->
+  <circle cx="950" cy="120" r="180" fill="url(#paint0_linear)" opacity="0.25"/>
+  <circle cx="150" cy="500" r="220" fill="url(#paint1_linear)" opacity="0.18"/>
+
+  <!-- Main Title -->
+  <text x="80" y="220"
+        fill="white"
+        font-size="64"
+        font-family="Arial"
+        font-weight="700">
+    Urban Civic Tracker
+  </text>
+
+  <!-- Subtitle -->
+  <text x="80" y="290"
+        fill="#CBD5E1"
+        font-size="30"
+        font-family="Arial">
+    Smart Civic Issue Reporting & Monitoring Platform
+  </text>
+
+  <!-- Features -->
+  <text x="80" y="380"
+        fill="#38BDF8"
+        font-size="28"
+        font-family="Arial">
+    • Real-Time Reporting
+  </text>
+
+  <text x="80" y="430"
+        fill="#38BDF8"
+        font-size="28"
+        font-family="Arial">
+    • Geospatial Analytics
+  </text>
+
+  <text x="80" y="480"
+        fill="#38BDF8"
+        font-size="28"
+        font-family="Arial">
+    • Priority-Based Issue Tracking
+  </text>
+
+  <!-- Bottom Label -->
+  <rect x="80" y="540" width="260" height="50" rx="12" fill="#2563EB"/>
+
+  <text x="110" y="573"
+        fill="white"
+        font-size="24"
+        font-family="Arial"
+        font-weight="600">
+    Powered by React + GIS
+  </text>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="770" y1="-60" x2="1130" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#9333EA"/>
+    </linearGradient>
+
+    <linearGradient id="paint1_linear" x1="-70" y1="280" x2="370" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06B6D4"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+</svg>
