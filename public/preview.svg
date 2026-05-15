@@ -19,7 +19,7 @@
         fill="#CBD5E1"
         font-size="30"
         font-family="Arial">
-    Smart Civic Issue Reporting & Monitoring Platform
+    Smart Civic Issue Reporting &amp; Monitoring Platform
   </text>
 
   <!-- Features -->
@@ -45,7 +45,7 @@
   </text>
 
   <!-- Bottom Label -->
-  <rect x="80" y="540" width="260" height="50" rx="12" fill="#2563EB"/>
+  <rect x="80" y="540" width="320" height="50" rx="12" fill="#2563EB"/>
 
   <text x="110" y="573"
         fill="white"
