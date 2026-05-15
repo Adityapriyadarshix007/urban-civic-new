@@ -98,7 +98,7 @@ export default function ReportMap({ reports }: Props) {
       </div>
 
       {/* 🔥 LEGEND */}
-      <div className="flex gap-4 items-center text-sm bg-white px-3 py-2 rounded-md shadow-sm">
+      <div className="flex gap-4 items-center text-sm bg-white dark:bg-gray-800 text-black dark:text-white px-4 py-2 rounded-md shadow-md">
         <div className="flex items-center gap-1">
           <span className="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
           <span>High</span>
